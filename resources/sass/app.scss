@@ -4,5 +4,13 @@
 // Variables
 @import 'variables';
 
+@import '~font-awesome/scss/font-awesome';
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bulma/bulma';
+
+@import '~buefy/src/scss/buefy';
+
+@import 'helpers';
+@import 'overrides';
+@import 'styles';
+@import 'manages';
