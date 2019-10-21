@@ -48,6 +48,7 @@
           <li><a href="{{route('permissions.index')}}">Permissions</a></li>
         </ul>
       </li> --}}
+      <li><a href="{{route('company.index')}}" >Manage Companies</a></li>
     </ul>
   </aside>
 </div>

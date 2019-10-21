@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 
-class UserController extends Controller
+class CompanyController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -24,7 +24,6 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('id', 'desc')->paginate(10);
-        return view('manage.users.index')->withUsers($users);
+        return view('manage.companies.index');
     }
 }
