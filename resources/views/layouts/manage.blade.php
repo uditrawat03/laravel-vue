@@ -29,6 +29,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/datatables.bulma.js') }}"></script>
+
     {{-- @include('_includes.notifications.toast') --}}
     @yield('scripts')
 </body>
