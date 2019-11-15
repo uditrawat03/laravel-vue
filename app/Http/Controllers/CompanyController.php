@@ -39,4 +39,19 @@ class CompanyController extends Controller
 
         return view('manage.companies.index');
     }
+
+
+    public function create(Request $request){
+        return view('manage.companies.create');
+    }
+
+
+    public function store(Request $request){
+        Company::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'type' => $request->type,
+            'status' => $request->status
+        ]);
+    }
 }

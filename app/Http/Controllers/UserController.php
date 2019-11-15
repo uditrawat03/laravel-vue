@@ -30,6 +30,9 @@ class UserController extends Controller
         if($request->ajax()){
             $users = User::select();
             return DataTables::eloquent($users)
+            ->addColumn('created_at', function($user){
+                return $user->created_at->toFormattedDateString();
+            })
             ->addColumn('action', function($user){
                 return  "
                     <a class='button is-outlined m-r-5' href='" . route('users.show', $user->id). "'>View</a>

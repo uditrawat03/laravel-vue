@@ -12,34 +12,14 @@
       </div>
       <hr class="m-t-0">
 
-       <user-list></user-list>
-
-      {{-- {{$users->links()}} --}}
+    <user-list list-url="'{{route('users.index')}}'"></user-list>
     </div>
 @endsection
 
 @section('scripts')
     <script>
-         $(function () {
-
-            var table = $('#users-data').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('users.index') }}",
-                columns: [
-                    {data: 'id', name: 'id'},
-                    {data: 'name', name: 'name'},
-                    {data: 'email', name: 'email'},
-                    {data: 'created_at', name: 'created_at'},
-
-                    {data: 'action', name: 'action', orderable: false, searchable: false},
-                ]
-            });
-
-        });
         var app = new Vue({
             el: '#app',
-
         });
     </script>
 @endsection
