@@ -24,5 +24,11 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+
+        // Auth::provider('custom', function ($app, array $config) {
+        //     // Return an instance of Illuminate\Contracts\Auth\UserProvider...
+
+        //     return new CustomUserProvider(new \App\Models\User);
+        // });
     }
 }

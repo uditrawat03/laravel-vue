@@ -15,14 +15,22 @@
           <div class="field">
             <label for="name" class="label">Name</label>
             <p class="control">
-              <input type="text" class="input" name="name" id="name">
+              <input type="text" class="input" name="name" id="name" value="{{old('name')}}">
+              @if($errors->has("name"))
+                <span>{{$errors->first('name')}}</span>
+
+              @endif
             </p>
           </div>
 
           <div class="field">
             <label for="email" class="label">Email:</label>
             <p class="control">
-              <input type="text" class="input" name="email" id="email">
+              <input type="text" class="input" name="email" id="email" value="{{old('name')}}">
+              @if($errors->has("email"))
+                <span>{{$errors->first('email')}}</span>
+
+              @endif
             </p>
           </div>
 

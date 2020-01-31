@@ -39,14 +39,6 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
-        $this->mapUserRoutes();
-
-        $this->mapCompanyRoutes();
-
-        $this->mapPostRoutes();
-
-        $this->mapProjectRoutes();
-        //
     }
 
     /**
@@ -61,38 +53,6 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
-    }
-
-    // User Routes
-    protected function mapUserRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/user.php'));
-    }
-
-    // Company Routes
-    protected function mapCompanyRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/company.php'));
-    }
-
-    // Company Routes
-    protected function mapProjectRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/project.php'));
-    }
-
-    // Company Routes
-    protected function mapPostRoutes()
-    {
-        Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/post.php'));
     }
 
     /**
